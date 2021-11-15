@@ -1,6 +1,6 @@
 ## Amazon_Vine_Analysis
 
-Module 16  Big Data
+Module 16:  Big Data
 
 Completed by Angela Kumar
 
@@ -149,20 +149,28 @@ Pyspark
 
 How many Vine reviews and non-Vine reviews were there?
 For the Furniture dataset:
-**_Vine Reviews = 136
-Non-Vine Reviews = 18,019_**
+
+_**Vine Reviews = 136**_
+
+_**Non-Vine Reviews = 18,019**_
 
 How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
 For the furniture dataset:
-**_Vine Reviews that were 5-stars = 74
-Non-Vine Reviews that were 5-stars = 8,482_**
+
+_**Vine Reviews that were 5-stars = 74**_
+
+**_Non-Vine Reviews that were 5-stars = 8,482_**
 
 What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
-For te furniture dataset:
-**_Vine Reviews that were 5-stars percentage = 74/136 or 54.41%
-Non-Vine Reviews that were 5-stars = 8,482/18,019 or 47.07%_**
+For the furniture dataset:
+
+_**_Vine Reviews that were 5-stars percentage = 74/136 or 54.41%
+
+**Non-Vine Reviews that were 5-stars = 8,482/18,019 or 47.07%_***_
 
 ### Summary
 Summary: In my opinion there is no positivity bias for reviews in the Vine program. At first glance, it appeared that there would be bias; however after further analysis, it indicates that there are more non-members entering the reviews than Vine members.  As a marketing strategy, we may want to know why don't more Vine members provide a review and how to increase the 5-star rating.  We may want to provide incentives for the Vine members to provide more reviews and increase ratings.  Or reach out to Non-members to provide a membership on a trial period.
 Then, provide one additional analysis that you could do with the dataset to support your statement, I think I would like to analyze the number of years a member has been a Vine member.  It is possible that they are satisfied with the service but feel that they do not need to offer a review.  I would like to analyze the number of purchases a member has made or the amount of the purchase in a given year.  We may need to reach out to the loyal customers for process improvement or incentive for a loyalty program.
+
+For this assignment I ended up doing SQL and Pyspark due to the percentage calculation, so that is why there are SQL tables and screenshots.
 
