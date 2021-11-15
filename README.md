@@ -73,9 +73,22 @@ All four DataFrames are loaded into their respective tables in pgAdmin
 
 <img width="410" alt="AVDB customers_table screenshot" src="https://user-images.githubusercontent.com/85860367/141739209-e7706fa9-75d0-4797-8ab8-8ed96125bfc4.PNG">
 
-**The products_table
+**The products_table**
 
 <img width="410" alt="AVDB products_table screenshot" src="https://user-images.githubusercontent.com/85860367/141739431-0414dfdf-ad82-4329-958c-b9b6608b1e1c.PNG">
+
+**The review_id_table**
+
+<img width="410" alt="AVDB review_id_table screenshot" src="https://user-images.githubusercontent.com/85860367/141739835-1c1a5b60-3ba7-4034-97b5-4ea2cbf80cd1.PNG">
+
+**The vine_table**
+
+<img width="410" alt="AVDB vine_table screenshot" src="https://user-images.githubusercontent.com/85860367/141740075-8dcb2bbb-7089-4650-8d4c-c42083d8d3a8.PNG">
+
+**Query to call each table:**
+
+<img width="410" alt="Query snapshot" src="https://user-images.githubusercontent.com/85860367/141741349-79ce72e0-306f-47e1-b155-ffc769b20177.PNG">
+
 
 * Deliverable 2: Determine Bias of Vine Reviews
 
@@ -83,15 +96,42 @@ Using either PySpark, Pandas, or SQL, follow the instructions below to complete 
 
 Filter the data and create a new DataFrame or table to retrieve all the rows where the total_votes count is equal to or greater than 20 to pick reviews that are more likely to be helpful and to avoid having division by zero errors later on.
 
+Pgadmin:
+<img width="410" alt="screenshot of total votes over 20" src="https://user-images.githubusercontent.com/85860367/141741628-bb544b16-3c44-4894-88d2-45878c786917.PNG">
+
+Pyspark:
+<img width="410" alt="Pyspark Total over 20 df" src="https://user-images.githubusercontent.com/85860367/141741930-048892dc-0b1e-4a4d-9998-3fa4bd7e4d78.PNG">
+
 Filter the new DataFrame or table created in Step 1 and create a new DataFrame or table to retrieve all the rows where the number of helpful_votes divided by total_votes is equal to or greater than 50%.
 
+Pyspark
+<img width="410" alt="Helpful df" src="https://user-images.githubusercontent.com/85860367/141742725-ad21b241-71af-4e10-b5e3-134daa7daba0.PNG">
+
 If you use the SQL option below, you’ll need to cast your columns as floats using WHERE CAST(helpful_votes AS FLOAT)/CAST(total_votes AS FLOAT) >=0.5.
+
+Pgadmin
+<img width="410" alt="helpful votes table screenshot" src="https://user-images.githubusercontent.com/85860367/141742478-75a3560d-8af1-4678-a514-dc14f22f8e67.PNG">
+
 Filter the DataFrame or table created in Step 2, and create a new DataFrame or table that retrieves all the rows where a review was written as part of the Vine program (paid), vine == 'Y'.
+
+Pgadmin
+<img width="410" alt="paid vine table screenshot" src="https://user-images.githubusercontent.com/85860367/141743024-86a0cc7c-46ef-4423-8d03-4b275493e4af.PNG">
+
+Pyspark
+<img width="410" alt="paid vine df" src="https://user-images.githubusercontent.com/85860367/141743190-00010434-fbc6-4077-8098-494f49bbb8ea.PNG">
 
 Repeat Step 3, but this time retrieve all the rows where the review was not part of the Vine program (unpaid), vine == 'N'.
 
+Pgadmin
+<img width="410" alt="unpaid vine table" src="https://user-images.githubusercontent.com/85860367/141743474-b35f17a2-211f-42b0-8772-9514a2383f22.PNG">
+
+Pyspark
+<img width="410" alt="Unpaid df" src="https://user-images.githubusercontent.com/85860367/141743577-5f2526d8-5e91-4e99-8969-ef2fd8c62e63.PNG">
+
 Determine the total number of reviews, the number of 5-star reviews, and the percentage of 5-star reviews for the two types of review (paid vs unpaid).
 
+Pyspark
+<img width="410" alt="percentage and count for 5 stars" src="https://user-images.githubusercontent.com/85860367/141744320-9a48a744-8a54-42d1-b21a-c27cb669ebf6.PNG">
 
 * Deliverable 3: A Written Report on the Analysis (README.md)
 
@@ -99,10 +139,30 @@ Overview of the analysis: Explain the purpose of this analysis.
 
 Results: Using bulleted lists and images of DataFrames as support, address the following questions:
 
-How many Vine reviews and non-Vine reviews were there?
-How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
-What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+Summary
 
+Pgadmin 
+<img width="410" alt="Total Summary snapshot" src="https://user-images.githubusercontent.com/85860367/141743775-b7373180-ddd1-43db-80a9-16f9178cce2e.PNG">
+
+Pyspark
+<img width="410" alt="Summary df" src="https://user-images.githubusercontent.com/85860367/141743989-4e7ded5b-546a-4db8-898f-00847bf8e0d6.PNG">
+
+How many Vine reviews and non-Vine reviews were there?
+For the Furniture dataset:
+**_Vine Reviews = 136
+Non-Vine Reviews = 18,019_**
+
+How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
+For the furniture dataset:
+**_Vine Reviews that were 5-stars = 74
+Non-Vine Reviews that were 5-stars = 8,482_**
+
+What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+For te furniture dataset:
+**_Vine Reviews that were 5-stars percentage = 74/136 or 54.41%
+Non-Vine Reviews that were 5-stars = 8,482/18,019 or 47.07%_**
 
 ### Summary
-Summary: In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement.
+Summary: In my opinion there is no positivity bias for reviews in the Vine program. At first glance, it appeared that there would be bias; however after further analysis, it indicates that there are more non-members entering the reviews than Vine members.  As a marketing strategy, we may want to know why don't more Vine members provide a review and how to increase the 5-star rating.  We may want to provide incentives for the Vine members to provide more reviews and increase ratings.  Or reach out to Non-members to provide a membership on a trial period.
+Then, provide one additional analysis that you could do with the dataset to support your statement, I think I would like to analyze the number of years a member has been a Vine member.  It is possible that they are satisfied with the service but feel that they do not need to offer a review.  I would like to analyze the number of purchases a member has made or the amount of the purchase in a given year.  We may need to reach out to the loyal customers for process improvement or incentive for a loyalty program.
+
