@@ -21,7 +21,8 @@ We'll close with an introduction to cloud services. Cloud services let us store 
 ### Resources
 
 Data: challenge_schema.sql; Amazon_Reviews_ETL_Starter_code.ipynb converted to Amazon_Reviews_ETL.ipynb
-Amazon Dataset https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt
+
+Amazon Dataset: https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt
 
 Technologies: Google Colab;Pyspark; AWS RDS, PgAdmin4: Postgres SQL; VSCode;
 
@@ -42,11 +43,39 @@ Next, you’ll use PySpark, Pandas, or SQL to determine if there is any bias tow
 Using your knowledge of the cloud ETL process, you’ll create an AWS RDS database with tables in pgAdmin, pick a dataset from the Amazon Review datasets (Links to an external site.), and extract the dataset into a DataFrame. 
 You'll transform the DataFrame into four separate DataFrames that match the table schema in pgAdmin. Then, you'll upload the transformed data into the appropriate tables and run queries in pgAdmin to confirm that the data has been uploaded.
 
-An Amazon Review dataset is extracted as a DataFrame 
+An Amazon Review dataset is extracted as a DataFrame (selected the furniture dataset)
+https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Furniture_v1_00.tsv.gz
+
+<img width="410" alt="DF Furniture" src="https://user-images.githubusercontent.com/85860367/141735908-88579f68-5a4c-4472-b778-63bfb3fc6d8f.PNG">
 
 The extracted dataset is transformed into four DataFrames with the correct columns 
 
+**The customers_table DataFrame**
+
+<img width="410" alt="Customer count df" src="https://user-images.githubusercontent.com/85860367/141736418-d8fb3136-a019-4cee-b703-164278470050.PNG">
+
+**The products_table DataFrame**
+
+<img width="410" alt="Products df" src="https://user-images.githubusercontent.com/85860367/141736865-fa0a4eed-53fe-449e-a2aa-e6c99af72bd8.PNG">
+
+**The review_id_table DataFrame**
+
+<img width="410" alt="review id df" src="https://user-images.githubusercontent.com/85860367/141737173-da110bcf-0b74-4bb8-aa05-20cbc24bcab9.PNG">
+
+**The vine_table DataFrame**
+
+<img width="410" alt="vine df" src="https://user-images.githubusercontent.com/85860367/141737382-41ffda4b-772e-4465-bcf9-628fecd3ef43.PNG">
+
+
 All four DataFrames are loaded into their respective tables in pgAdmin 
+
+**The customers_table**
+
+<img width="410" alt="AVDB customers_table screenshot" src="https://user-images.githubusercontent.com/85860367/141739209-e7706fa9-75d0-4797-8ab8-8ed96125bfc4.PNG">
+
+**The products_table
+
+<img width="410" alt="AVDB products_table screenshot" src="https://user-images.githubusercontent.com/85860367/141739431-0414dfdf-ad82-4329-958c-b9b6608b1e1c.PNG">
 
 * Deliverable 2: Determine Bias of Vine Reviews
 
