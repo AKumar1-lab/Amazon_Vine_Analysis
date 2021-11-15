@@ -164,9 +164,9 @@ _**Vine Reviews that were 5-stars = 74**_
 What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
 For the furniture dataset:
 
-_**_Vine Reviews that were 5-stars percentage = 74/136 or 54.41%
+**_Vine Reviews that were 5-stars percentage = 74/136 or 54.41%_**
 
-**Non-Vine Reviews that were 5-stars = 8,482/18,019 or 47.07%_***_
+**_Non-Vine Reviews that were 5-stars = 8,482/18,019 or 47.07%_**
 
 ### Summary
 Summary: In my opinion there is no positivity bias for reviews in the Vine program. At first glance, it appeared that there would be bias; however after further analysis, it indicates that there are more non-members entering the reviews than Vine members.  As a marketing strategy, we may want to know why don't more Vine members provide a review and how to increase the 5-star rating.  We may want to provide incentives for the Vine members to provide more reviews and increase ratings.  Or reach out to Non-members to provide a membership on a trial period.
